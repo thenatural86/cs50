@@ -1,4 +1,4 @@
-from cs50 import get_string
+# from cs50 import get_string
 
 string = get_string("Text: ")
 letters = words = sentences = 0
