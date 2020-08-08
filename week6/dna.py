@@ -1,24 +1,28 @@
 from sys import argv
 import csv
 
-if len(argv) != 3:
-    print("Get your weight up")
-else:
-    csvFile = open(argv[1])
-    txtFile = open(argv[2])
-    # reads one row at a time
-    data = csv.reader(csvFile)
-    # reads whole file at once
-    seq = txtFile.read()
 
-    length = len(seq)
-    # print(length)
+def get_max(sequence, sub):
+    print("hello")
 
-    for i in range(length):
-        print(i)
-        for j in range(length):
-            # if seq[i:j] == seq[i + 4]:
-            print(seq[i:j])
 
-        # need to find most repeating substring
-# print(seq)
+def main():
+    if len(argv) != 3:
+        print("Get your weight up")
+    else:
+        csvFile = argv[1]
+        with open(csvFile) as csv_file:
+            data = csv.reader(csv_file)
+            for i in data:
+                print(i)
+
+        txtFile = argv[2]
+        with open(txtFile) as txt_file:
+            seq = txt_file.read()
+
+        counter = []
+        for i in range(len(seq)):
+            print(i)
+
+
+main()
