@@ -9,9 +9,8 @@ def get_max(seq, sub):
     # set var to length of substring
     j = len(sub)
     maxi = 0
-
     # iterate through sequence
-    for i in range(len(seq)):
+    for x in range(len(seq)):
         # the substring from seq[from the ith character: up through but not including the jth character]
         # is equal to the substring that is passed in
         if seq[i:j] == sub:
@@ -22,8 +21,8 @@ def get_max(seq, sub):
                 # update counter
                 counter += 1
                 # update in to length of string
-                i += len(seq)
-                j += len(seq)
+                i += len(sub)
+                j += len(sub)
                 # if counter is greater than mxai than update maxi to the value of counter
                 if counter > maxi:
                     maxi = counter
