@@ -6,8 +6,17 @@ import csv
 
 def get_max(seq, sub):
     i = 0
+    # set var to length of substring
     j = len(sub)
     maxi = 0
+
+    # iterate through sequence
+    for i in range(len(seq)):
+        # the substring from seq[from the ith character: up through but not including the jth character]
+        # is equal to the substring that is passed in
+        if seq[i:j] == sub:
+            # do this thing
+            print(i)
 
 
 def main():
@@ -29,7 +38,8 @@ def main():
             # read in entire file at once
             seq = txt_file.read()
             print(seq)
-            get_max(seq, data)
+            get_max(seq, seq)
 
 
-main()
+if __name__ == "__main__":
+    main()
